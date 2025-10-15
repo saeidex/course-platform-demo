@@ -10,7 +10,8 @@
         "lint:fix": "eslint . --fix",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "typecheck": "nuxi typecheck"
+        "typecheck": "nuxi typecheck",
+        "prepare": "husky"
     },
     "dependencies": {
         "@nuxt/eslint": "1.9.0",
@@ -22,6 +23,11 @@
     "devDependencies": {
         "@antfu/eslint-config": "^6.0.0",
         "eslint": "^9.37.0",
-        "eslint-plugin-format": "^1.0.2"
+        "eslint-plugin-format": "^1.0.2",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.4"
+    },
+    "lint-staged": {
+        "*": "eslint ."
     }
 }
